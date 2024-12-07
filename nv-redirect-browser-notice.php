@@ -4,7 +4,7 @@
  * Plugin Name:       NV Redirect Browser Notice
  * Plugin URI:        https://github.com/davidfuzju/nv-redirect-browser-notice
  * Description:       Show a notice when the user is visiting using specific browsers (e.g., in-app browsers like WeChat, LINE) and suggest switching to the default system browser.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            David FU
  * Text Domain:       nv-redirect-browser-notice
  */
@@ -17,7 +17,7 @@ if (! defined('ABSPATH')) {
 // holds the plugin path.
 define('NV_REDIRECT_BROWSER_NOTICE_PATH', plugin_dir_path(__FILE__));
 define('NV_REDIRECT_BROWSER_NOTICE_URI', plugin_dir_url(__FILE__));
-define('NV_REDIRECT_BROWSER_NOTICE_VERSION', '1.0.1');
+define('NV_REDIRECT_BROWSER_NOTICE_VERSION', '1.0.2');
 
 // Enqueue scripts and styles
 function nv_redirect_browser_notice_enqueue_assets()
