@@ -1,68 +1,58 @@
-=== NV Poster ===
+=== NV Redirect Browser Notice ===
 Contributors: David FU
-Tags: poster, product poster, WooCommerce, product image, QR code
+Tags: browser detection, user experience, redirect notice
 Requires at least: 5.0
-Tested up to: 6.3
-Requires PHP: 7.0
+Tested up to: 6.4
+Requires PHP: 7.4
 Stable tag: 1.0
 License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Generate a poster with product information, product image, and QR code on a black background. Requires WooCommerce to be installed and activated.
+Detect in-app browsers and guide users to open the website in their system browser for the best experience.
 
 == Description ==
 
-**NV Poster** is a plugin that allows you to generate a poster from WooCommerce product information, including the product name, product image, and a QR code that links to the product page.
+**NV Redirect Browser Notice** detects when users open the website in specific in-app browsers, such as WeChat, and guides them to open the site in their system browser. The plugin overlays a notice and locks user interaction with the current page to prevent confusion. 
 
-The poster is generated using HTML5 canvas and can be previewed directly on the website, with an option to download the poster image. This plugin is perfect for marketing your products visually, or sharing product information with a creative, personalized poster.
-
-**Key Features:**
-* Requires WooCommerce
-* Options NV Referral Code
-* Generate posters based on WooCommerce product information and Options 
-* Automatically includes product image, name, and a QR code
-* Easy to download the generated poster
-* Mobile-friendly poster preview
-* Generate a QR code (whether the referral code is included depends on whether the NV Referral Code plugin is installed).
+Features:
+- Automatically detects in-app browsers like WeChat.
+- Displays a customizable notice with multi-language support.
+- Locks user interaction with the original page to guide better usage.
+- Fully responsive and supports small screen devices.
+- Compatible with WPML for multi-language environments.
 
 == Installation ==
 
-1. Ensure that you have WooCommerce installed and activated.
-2. Upload the `product-poster-generator` plugin to the `/wp-content/plugins/` directory, or install the plugin directly through the WordPress plugins screen.
-3. Activate the plugin through the 'Plugins' screen in WordPress.
-4. The "Generate Poster" button will be available on WooCommerce product pages, allowing you to generate and preview product posters.
-5. If the NV Referral Code plugin is installed, the QR code will include the referral code in the link. If not, the QR code will link to the current product page without a referral code.
+1. Upload the plugin files to the `/wp-content/plugins/nv-redirect-browser-notice` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. No additional setup is required; the plugin works out of the box.
 
 == Frequently Asked Questions ==
 
-= Does this plugin work without WooCommerce? =
+= Which browsers does the plugin detect? =
+Currently, the plugin detects browsers like WeChat. You can extend the detection logic in `js/nv-browser-notice.js`.
 
-No, this plugin requires WooCommerce to be installed and activated to generate product posters.
+= How do I customize the notice text? =
+The notice text can be modified via the WordPress admin area if WPML is installed. Alternatively, you can directly edit the localized text in the plugin’s PHP file.
 
-= Can I customize the poster design? =
-
-Currently, the poster is generated with a fixed black background and product information (product name, product image, and QR code). Future updates may allow for more customization.
-
-= Is the plugin mobile-friendly? =
-
-Yes, the plugin is designed to work on both desktop and mobile devices, allowing users to generate and preview posters from mobile screens.
+= Does the plugin support multi-language? =
+Yes, the plugin is compatible with WPML for multi-language support.
 
 == Screenshots ==
 
-1. generate poster button position
-2. poster image show on the mask overlay
+1. **Example notice**: The notice displayed in an in-app browser.
+2. **Multi-language support**: Example notice in a different language.
+3. **Responsive design**: Notice layout on a small screen.
 
 == Changelog ==
 
 = 1.0 =
-* Initial release of the Product Poster Generator.
-* WooCommerce product poster generation with image, name, and QR code.
+* Initial release with basic functionality.
+* Detect in-app browsers.
+* Display a notice with system browser guidance.
+* Lock user interactions on the original page.
 
 == Upgrade Notice ==
 
 = 1.0 =
-Initial release.
-
-== License ==
-
-This plugin is licensed under the GPLv2 or later. For more information, please see the [GPL license](https://www.gnu.org/licenses/gpl-2.0.html).
+First release of the plugin. Install to enhance the user experience for in-app browser visitors.

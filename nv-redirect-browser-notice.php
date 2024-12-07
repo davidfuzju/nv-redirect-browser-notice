@@ -39,7 +39,8 @@ function nv_redirect_browser_notice_enqueue_assets()
 
     // Pass translations to the script
     wp_localize_script('nv-browser-notice-script', 'translation', array(
-        'noticeMessage' => __('It seems you are using an in-app browser. For the best experience, please open this page in your system browser.', 'nv-redirect-browser-notice'),
+        'noticeMessage_part1' => __('为了获得更好的体验', 'nv-redirect-browser-notice'),
+        'noticeMessage_part2' => __('请点击右上角的按钮，选择【在默认浏览器中打开】来访问完整版本', 'nv-redirect-browser-notice'),
     ));
 }
 add_action('wp_enqueue_scripts', 'nv_redirect_browser_notice_enqueue_assets');

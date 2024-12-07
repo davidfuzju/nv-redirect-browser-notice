@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
             <div id="nv-browser-notice" style="display: none;">
                 <div class="notice-content">
                     <img src="https://nuvous1.com/wp-content/uploads/2024/09/300-e1726400079646.png" alt="Brand Icon" class="brand-icon">
-                    <p>为了获得更好的体验</br>请点击右上角的按钮，选择【在默认浏览器中打开】来访问完整版本</p>
+                    <p>${translation.noticeMessage_part1}</br>${translation.noticeMessage_part2}</p>
                 </div>
                 <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" fill="#000000">
                   <path d="M0 0h24v24H0z" fill="none"/>
