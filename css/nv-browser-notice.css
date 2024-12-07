@@ -1,0 +1,69 @@
+/* #nv-browser-notice styles */
+#nv-browser-notice {
+  position: fixed; /* Fixed at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%; /* Ensure it does not exceed the screen width */
+  z-index: 1001; /* Above the overlay */
+  background-color: gray;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /* 确保 padding 包含在宽度内 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Notice content */
+#nv-browser-notice .notice-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%; /* 防止内容超出父容器 */
+  gap: 10px; /* Space between elements */
+}
+
+#nv-browser-notice .notice-content p {
+  word-wrap: break-word; /* Wrap text for small screens */
+  color: #ffffff;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Brand icon */
+#nv-browser-notice img.brand-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Arrow icon */
+#nv-browser-notice svg.arrow-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  transform: rotate(135deg);
+}
+
+/* Overlay styles */
+#nv-page-overlay {
+  position: fixed; /* Full-page coverage */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* Below notice */
+  display: none; /* Initially hidden */
+  pointer-events: all; /* Ensure it intercepts user interactions */
+  cursor: not-allowed; /* Visual cue for disabled interactions */
+}
+
+/* Adjust body when notice is active */
+body.notice-active {
+  margin-top: 100px; /* Adjust for the height of the notice */
+  transition: margin-top 0.3s ease-in-out;
+  overflow: hidden; /* Disable scrolling */
+}
